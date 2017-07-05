@@ -44,10 +44,3 @@ Pour connection sur le modèle 4028 :
  	- version trouvé sur internet : katana_driver_kinetic 
  		https://github.com/uos/katana_driver
 
-
-----------------------------
-|         Contact :        |
-----------------------------
-|  Matthieu Vilain UCP     |
-|  mattvilain@gmail.com    |
-----------------------------
