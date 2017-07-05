@@ -1,0 +1,10 @@
+Neuronics AG
+============
+(* = active maintainer)
+
+Hasan Karahan <hasan.karahan@neuronics.ch>
+Tiziano Mueller <tiziano.mueller@neuronics.ch>
+Roberto Gleiser <gleiser@neuronics.ch>
+Christoph Voser <christoph.voser@neuronics.ch>
+Jonas Haller <jonas.haller@neuronics.ch>
+*Philipp Keller <philipp.keller@neuronics.ch>

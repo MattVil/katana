@@ -1,0 +1,10 @@
+digraph G
+{
+  edge [fontname="FreeSans.ttf",fontsize=10,labelfontname="FreeSans.ttf",labelfontsize=10];
+  node [fontname="FreeSans.ttf",fontsize=10,shape=record];
+  Node1 [label="{TMotCLB\n|+ enable\l+ order\l+ dir\l+ mcf\l+ encoderPositionAfter\l+ isCalibrated\l+ dyl\l+ scp\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="scp",arrowtail="open",fontname="FreeSans.ttf"];
+  Node2 [label="{TMotSCP\n|+ maxppwm\l+ maxnpwm\l+ kP\l+ kI\l+ kD\l+ kARW\l+ kP_speed\l+ kI_speed\l+ kD_speed\l+ maxppwm_nmp\l+ maxnpwm_nmp\l+ kspeed_nmp\l+ kpos_nmp\l+ kI_nmp\l+ crash_limit_nmp\l+ crash_limit_lin_nmp\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTMotSCP.html",tooltip="[SCP] static controller parameters"];
+  Node3 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="dyl",arrowtail="open",fontname="FreeSans.ttf"];
+  Node3 [label="{TMotDYL\n|+ maxaccel\l+ maxdecel\l+ minpos\l+ maxpspeed\l+ maxnspeed\l+ maxcurr\l+ actcurr\l+ maxaccel_nmp\l+ maxpspeed_nmp\l+ maxnspeed_nmp\l+ maxcurr_nmp\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTMotDYL.html",tooltip="[DYL] dynamic limits"];
+}

@@ -1,0 +1,9 @@
+digraph G
+{
+  edge [fontname="FreeSans.ttf",fontsize=10,labelfontname="FreeSans.ttf",labelfontsize=10];
+  node [fontname="FreeSans.ttf",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="KNI_MHF::unary_deg2rad::operator()",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans.ttf"];
+  Node2 [label="KNI_MHF::deg2rad",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceKNI__MHF.html#ddad2ed2f4a9f6f13a56554df726bde5",tooltip="conversion from degree to radian"];
+}

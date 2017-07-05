@@ -1,0 +1,8 @@
+digraph G
+{
+  edge [fontname="FreeSans.ttf",fontsize=10,labelfontname="FreeSans.ttf",labelfontsize=10];
+  node [fontname="FreeSans.ttf",fontsize=10,shape=record];
+  Node1 [label="{TBlendtrace\n|+ p1p2n\l+ p2p3n\l+ V1A\l+ V1B\l+ P1A\l+ P1B\l+ b1\l+ b2\l+ m1\l+ m2\l+ tA\l+ tB\l+ distBA\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="V1A\nV1B\nb1\nb2\nm1\nm2\nP1A\nP1B\np2p3n\np1p2n",arrowtail="open",fontname="FreeSans.ttf"];
+  Node2 [label="{TPoint3D\n|+ X\l+ Y\l+ Z\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTPoint3D.html"];
+}

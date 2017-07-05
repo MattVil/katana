@@ -1,0 +1,19 @@
+<?xml version = "1.0"?>
+<broker name="broker 1" ip="127.0.0.1" port="1115" robulab="no" webbots="not implemented" ivy="no"/>
+<katana name="bras" ip="10.0.4.5" port="5566" pos_min="-14640,-31000,-31000,-1700,-16600,12000" pos_max="31000,5100,1970,31000,31000,30770" config_file="katana6M180.cfg" passif="true">
+  <joint enc_min="-15000" enc_max="31000" angle_offset="-0.36"/>
+  <joint enc_min="-31000" enc_max="5800" angle_offset="124.23"/>
+  <joint enc_min="-31000" enc_max="2500" angle_offset="-122.88"/>
+  <joint enc_min="-1780" enc_max="31000" angle_offset="-121.02"/>
+  <joint enc_min="-18000" enc_max="30000" angle_offset="-8.5"/>
+  <segment length=".317"/>
+  <segment length=".190"/>
+  <segment length=".139"/>
+  <segment length=".315"/>  
+</katana>
+<obstacles>
+    <cylindre name="table" type="hard" bottom_center="(0.0,0.0,-0.1)" hight="0.25" radius="10"/>
+    <cylindre name="biclops" type="hard" bottom_center="(0.0,-0.6,0.0)" hight="1" radius="0.3"/>
+    <cylindre name="pan_tilt" type="hard" bottom_center="(0.35,-0.45,0.0)" hight="1" radius="0.3"/>
+</obstacles>
+

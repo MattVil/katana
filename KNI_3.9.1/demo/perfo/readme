@@ -1,0 +1,9 @@
+# README for socketcontrol demo
+# Neuronics AG
+# 2007
+
+Analyzing the performance of the robot's commands.
+
+During this test the motors are not in move; but this test is a good way to
+analyse, if something is wrong with the robot or not! Every command is tested
+systematically and the response time and return values are give back.

@@ -1,0 +1,11 @@
+# README for socketcontrol demo
+# Neuronics AG
+# 2007
+
+This small program initates a link between the Katana robot and the first
+COM port (COM port enumaration can start differently between different OS;
+this file was run under Linux and there the first COM port has the number
+0; under Win32 the number would be 1!).
+After the initiation a connection check will be performed and the user will
+get the result; this program should be a base for further programs, which
+are using the libKNIBase library to control the Katana robot.

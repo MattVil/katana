@@ -1,0 +1,44 @@
+"""
+::BOH
+
+Copyright (c) 2006 Neuronics AG. All rights reserved.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or (at
+your option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+::EOH
+
+distutils setup file for use in creating a Python module from the KNI
+"""
+
+
+from distutils.core import setup, Extension
+
+setup(
+    name             = 'KNI',
+    description      = 'KatanaNativeInterface. C++ library for controlling the Katana',
+    version          = '3.6.0',
+    author           = 'Tiziano Mueller et.al.',
+    author_email     = 'tiziano.mueller@neuronics.hc',
+    url              = 'http://www.neuronics.ch',
+    license          = 'GPL',
+    platforms        = 'Linux',
+    long_description = 'KNI is a C++ library for controlling the Katana',
+    ext_modules      = [ Extension( '_KNI', [ 'KNI_wrap.cxx' ],
+                                    include_dirs = [ '../include' ],
+                                    library_dirs = [ '../lib/linux' ],
+                                    libraries    = [ 'KNIBase', 'KNI_InvKin', 'KNI_LM' ],
+                                    )
+                       ],
+    py_modules       = ['KNI', 'KNIWrapper']
+    )

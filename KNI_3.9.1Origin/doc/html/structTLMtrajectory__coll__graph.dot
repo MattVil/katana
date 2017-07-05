@@ -1,0 +1,8 @@
+digraph G
+{
+  edge [fontname="FreeSans.ttf",fontsize=10,labelfontname="FreeSans.ttf",labelfontsize=10];
+  node [fontname="FreeSans.ttf",fontsize=10,shape=record];
+  Node1 [label="{TLMtrajectory\n|+ arr_actpos\l+ arr_tarpos\l+ distance\l+ time\l+ dt\l+ number_of_points\l+ points\l+ motors\l+ derivatives\l+ coefficients\l+ parameters\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="points",arrowtail="open",fontname="FreeSans.ttf"];
+  Node2 [label="{TLM_points\n|+ pos\l+ time\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTLM__points.html",tooltip="[LM] linear movement: points to be interpolated"];
+}

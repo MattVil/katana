@@ -1,0 +1,11 @@
+digraph G
+{
+  edge [fontname="FreeSans.ttf",fontsize=10,labelfontname="FreeSans.ttf",labelfontsize=10];
+  node [fontname="FreeSans.ttf",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="CCdlBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCCdlBase.html",tooltip="Abstract base class for devices."];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans.ttf"];
+  Node2 [label="CCdlCOM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCCdlCOM.html",tooltip="Encapsulates the serial port device."];
+  Node1 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans.ttf"];
+  Node3 [label="CCdlSocket",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCCdlSocket.html",tooltip="Encapsulates the socket communication device."];
+}

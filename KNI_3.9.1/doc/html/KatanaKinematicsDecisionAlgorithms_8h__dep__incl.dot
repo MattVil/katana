@@ -1,0 +1,14 @@
+digraph G
+{
+  edge [fontname="FreeSans.ttf",fontsize=10,labelfontname="FreeSans.ttf",labelfontsize=10];
+  node [fontname="FreeSans.ttf",fontsize=10,shape=record];
+  Node1 [label="include/KNI_InvKin/KatanaKinematicsDecisionAlgorithms.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans.ttf"];
+  Node2 [label="include/KNI_InvKin/KatanaKinematics5M180.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$KatanaKinematics5M180_8h.html"];
+  Node1 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans.ttf"];
+  Node3 [label="include/KNI_InvKin/KatanaKinematics6M180.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$KatanaKinematics6M180_8h.html"];
+  Node1 -> Node4 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans.ttf"];
+  Node4 [label="include/KNI_InvKin/KatanaKinematics6M90G.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$KatanaKinematics6M90G_8h.html"];
+  Node1 -> Node5 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans.ttf"];
+  Node5 [label="include/KNI_InvKin/KatanaKinematics6M90T.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$KatanaKinematics6M90T_8h.html"];
+}

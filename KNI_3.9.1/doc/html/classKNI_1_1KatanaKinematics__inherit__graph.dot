@@ -1,0 +1,15 @@
+digraph G
+{
+  edge [fontname="FreeSans.ttf",fontsize=10,labelfontname="FreeSans.ttf",labelfontsize=10];
+  node [fontname="FreeSans.ttf",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="{KNI::KatanaKinematics\n||+ ~KatanaKinematics()\l+ init()\l+ DK()\l+ IK()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize=10,style="solid",arrowtail="empty",fontname="FreeSans.ttf"];
+  Node2 [label="{KNI::KatanaKinematics5M180\n|- _length\l- _parameters\l- _tolerance\l- _nrOfPossibleSolutions\l|+ init()\l+ DK()\l+ IK()\l- _setLength()\l- _setParameters()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classKNI_1_1KatanaKinematics5M180.html",tooltip="Tiziano Mueller &lt;tiziano.mueller@neuronics.ch&gt;"];
+  Node1 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",arrowtail="empty",fontname="FreeSans.ttf"];
+  Node3 [label="{KNI::KatanaKinematics6M180\n|- _length\l- _parameters\l- _tolerance\l- _nrOfPossibleSolutions\l|+ init()\l+ DK()\l+ IK()\l- _setLength()\l- _setParameters()\l- IK_b1b2costh3_6M180()\l- thetacomp()\l- angledef()\l- AnglePositionTest()\l- PositionTest6M180()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classKNI_1_1KatanaKinematics6M180.html",tooltip="Tiziano Mueller &lt;tiziano.mueller@neuronics.ch&gt;"];
+  Node1 -> Node4 [dir=back,color="midnightblue",fontsize=10,style="solid",arrowtail="empty",fontname="FreeSans.ttf"];
+  Node4 [label="{KNI::KatanaKinematics6M90G\n|- _length\l- _parameters\l- _tolerance\l- _nrOfPossibleSolutions\l|+ init()\l+ DK()\l+ IK()\l- _setLength()\l- _setParameters()\l- IK_theta234theta5()\l- IK_b1b2costh3_6MS()\l- thetacomp()\l- angledef()\l- GripperTest()\l- AnglePositionTest()\l- PositionTest6MS()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classKNI_1_1KatanaKinematics6M90G.html",tooltip="Tiziano Mueller &lt;tiziano.mueller@neuronics.ch&gt;"];
+  Node1 -> Node5 [dir=back,color="midnightblue",fontsize=10,style="solid",arrowtail="empty",fontname="FreeSans.ttf"];
+  Node5 [label="{KNI::KatanaKinematics6M90T\n|- _length\l- _parameters\l- _tolerance\l- _nrOfPossibleSolutions\l|+ init()\l+ DK()\l+ IK()\l- _setLength()\l- _setParameters()\l- IK_theta234theta5()\l- IK_b1b2costh3_6MS()\l- thetacomp()\l- angledef()\l- GripperTest()\l- AnglePositionTest()\l- PositionTest6MS()\l- findFirstEqualAngle()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classKNI_1_1KatanaKinematics6M90T.html",tooltip="Tiziano Mueller &lt;tiziano.mueller@neuronics.ch&gt;"];
+}

@@ -1,0 +1,17 @@
+# README for BurnInTest
+# Author: Jonas Haller <jonas.haller@neuronics.ch>
+# Neuronics AG
+# 2007
+
+! This demo is only for Neuronics internal use !
+! This demo has hardcoded encoder values that are not suitabel for every Katana type !
+(encoders should be suitable for Katana6M180, Katana6M90G, Katana6M90T)
+
+Compiling BurnInTest:
+- make a KNI
+- copy the BurnInTest folder to <KNI>/demos/
+- make the BurnInTest
+
+To log state before a MotorTimeoutException:
+- replace kmlExt.cpp in KNI with the kmlExt_motortimeoutlog.cpp (renamed to kmlExt.cpp)
+- replace kmlExt.h in KNI with the kmlExt_motortimeoutlog.h (renamed to kmlExt.h)

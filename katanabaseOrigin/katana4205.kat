@@ -1,0 +1,14 @@
+Name = KatanaArm4205
+
+IP = 10.0.5.5
+
+port = 5566
+broker_port = 1115
+
+config = katana6M180.cfg
+
+/*position min/max que peuvent atteindre les butees*/ 
+/*need security check !!!*/ 
+min = {-14640,-31000,-31000,-1700,-16600,12000}
+max = {31000,5100,1970,31000,31000,30770}
+

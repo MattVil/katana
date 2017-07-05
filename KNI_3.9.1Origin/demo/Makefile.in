@@ -1,0 +1,76 @@
+#===========================================================================
+#
+#Makefile --
+#
+#
+#Tiziano Mueller <tiziano.mueller@neuronics.ch>
+#   
+#   Copyright (c) 2005
+#   
+#   Neuronics AG <www.neuronics.ch>
+#   Switzerland
+#
+#1.0 / 26. Feb 05 (tm)
+#- from scratch
+#
+#1.1 / 1. Mar 05 (tm)
+#- removed targets for every demo and
+#  added generic rule for demos
+#- added generic rule for demo_clean
+#
+#===========================================================================
+
+CXX		=	@CXX@
+CXXFLAGS	+=	@CXXFLAGS@
+
+TARGETS		=	@DEMO_BUILD_TARGETS@
+CTARGETS	=	keyboard
+
+TARGETS_D	=	$(foreach target,$(TARGETS),$(target).demo)
+TARGETS_D_C	=	$(foreach target,$(TARGETS),$(target).demo_clean)
+
+CTARGETS_D	=	$(foreach target,$(CTARGETS),$(target).common)
+
+INCLUDE_DIR = ../include -I./common
+LIBRARY_DIR  = ../lib/linux
+
+BASE_LIBRARY = $(LIBRARY_DIR)/libKNIBase.a
+INVKIN_LIBRARY = $(LIBRARY_DIR)/libKNI_InvKin.a
+LM_LIBRARY = $(LIBRARY_DIR)/libKNI_LM.a
+
+AVAILABLE_LIBRARIES = ./common/keyboard.o ${BASE_LIBRARY} ${INVKIN_LIBRARY} ${LM_LIBRARY}
+
+.SILENT:
+
+all: $(TARGETS_D)
+
+$(CTARGETS_D):
+	echo -n "Building: $@"
+	if $(CXX) $(CXXFLAGS) -I$(INCLUDE_DIR) -c -o common/$(@:.common=).o $(wildcard common/$(@:.common=).cpp) 2>.clog; \
+	then echo " [ok]"; \
+	else echo " [failed]"; \
+		cat .clog; \
+	fi
+
+$(TARGETS_D): $(CTARGETS_D)
+	echo -n "Building: $@"
+	if $(CXX) $(CXXFLAGS) -I$(INCLUDE_DIR) -lpthread -o $(@:.demo=)/$(@:.demo=) $(wildcard $(@:.demo=)/*.cpp) ${AVAILABLE_LIBRARIES} 2>.clog; \
+	then echo " [ok]"; \
+	else echo " [failed]"; \
+		cat .clog; \
+	fi
+
+$(TARGETS_D_C):
+	echo "Cleaning: $(@:_clean=)"
+	rm -f $(@:.demo_clean=)/$(@:.demo_clean=)
+	rm -f $(@:.demo_clean=)/*~
+	rm -f $(@:.demo_clean=)/*.o
+
+clean_common:
+	echo "Cleaning: common"
+	rm -f common/*.o
+	rm -f common/*~
+
+clean: clean_common $(TARGETS_D_C)
+	echo "Cleaning up"
+	rm -f ./.?log 

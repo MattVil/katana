@@ -1,0 +1,16 @@
+Name = WebotsA
+
+IP = 127.0.0.1
+
+port = 5566
+broker_port = 1115
+
+
+config = webots_katana6M180.cfg
+
+/*position min/max que peuvent atteindre les butees*/ 
+/*need security check !!!*/ 
+min = {-14640,-31000,-31000,-1700,-16600,12500} 
+max = {31000,5100,1970,31000,31000,30770}
+
+robulab = yes
